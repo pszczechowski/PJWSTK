@@ -3,7 +3,7 @@ package unityofwork;
 import fields.Entity;
 
 /**
- * Created by slawo on 17.11.2017.
+ * Created by piotr
  */
 public interface IUnityOfWork {
 
