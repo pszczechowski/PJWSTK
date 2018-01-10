@@ -29,14 +29,14 @@ public class Run {
             int key = tv.add(tvSeries);
 
             Actor a = new Actor();
-            a.setActorName("asd");
-            a.setActorDayOfBirth(dateInput("1993-01-01"));
-            a.setActorBiography("asdasdasd");
+            a.setActorName("mam");
+            a.setActorDayOfBirth(dateInput("1991-01-01"));
+            a.setActorBiography("tatata");
             a.setIdTvSeries(key);
             actor.add(a);
             System.out.println(a);
-            a.setActorName("dsa");
-            a.setActorDayOfBirth(dateInput("1999-01-01"));
+            a.setActorName("gsa");
+            a.setActorDayOfBirth(dateInput("1995-01-01"));
             a.setActorBiography("dsa");
             a.setIdTvSeries(key);
             actor.update(a);
