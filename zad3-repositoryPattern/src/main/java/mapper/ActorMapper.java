@@ -40,7 +40,7 @@ public class ActorMapper extends AbstractMapper<Actor> {
     }
 
     @Override
-    protected Actor doLoad(ResultSet rs) throws SQLException {
+    public Actor doLoad(ResultSet rs) throws SQLException {
         Actor a = new Actor();
         a.setId(rs.getInt("id"));
         a.setActorName(rs.getString("actorName"));
