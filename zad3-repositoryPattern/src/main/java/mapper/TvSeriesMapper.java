@@ -41,7 +41,7 @@ public class TvSeriesMapper extends AbstractMapper<TvSeries> {
     }
 
     @Override
-    protected TvSeries doLoad(ResultSet rs) throws SQLException {
+    public TvSeries doLoad(ResultSet rs) throws SQLException {
         TvSeries tv = new TvSeries();
         tv.setId(rs.getInt("id"));
         tv.setName(rs.getString("tvSeriesName"));
