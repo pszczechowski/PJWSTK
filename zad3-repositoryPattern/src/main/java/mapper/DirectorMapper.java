@@ -41,7 +41,7 @@ public class DirectorMapper extends AbstractMapper<Director> {
     }
 
     @Override
-    protected Director doLoad(ResultSet rs) throws SQLException {
+    public Director doLoad(ResultSet rs) throws SQLException {
         Director d = new Director();
         d.setId(rs.getInt("id"));
         d.setDirectorName(rs.getString("directorName"));
@@ -52,14 +52,14 @@ public class DirectorMapper extends AbstractMapper<Director> {
 
 
     @Override
-    protected void parametrizeInsertStatement(PreparedStatement statement, Director d) throws SQLException {
+    public void parametrizeInsertStatement(PreparedStatement statement, Director d) throws SQLException {
         statement.setString(1,d.getDirectorName());
         statement.setDate(2,java.sql.Date.valueOf(d.getDirectorDayOfBirth()));
         statement.setString(3,d.getDirectorBiography());
     }
 
     @Override
-    protected void parametrizeUpdateStatement(PreparedStatement statement, Director d) throws SQLException {
+    public void parametrizeUpdateStatement(PreparedStatement statement, Director d) throws SQLException {
         parametrizeInsertStatement(statement, d);
         statement.setLong(1,d.getId());
     }
