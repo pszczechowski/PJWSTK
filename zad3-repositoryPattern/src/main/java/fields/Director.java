@@ -71,4 +71,30 @@ public class Director implements DomainObject {
                 ", idTvSeries=" + idTvSeries +
                 '}';
     }
+     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Director director = (Director) o;
+
+        if (id != director.id) return false;
+        if (idTvSeries != director.idTvSeries) return false;
+        if (directorName != null ? !directorName.equals(director.directorName) : director.directorName != null)
+            return false;
+        if (directorDayOfBirth != null ? !directorDayOfBirth.equals(director.directorDayOfBirth) : director.directorDayOfBirth != null)
+            return false;
+        return directorBiography != null ? directorBiography.equals(director.directorBiography) : director.directorBiography == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (directorName != null ? directorName.hashCode() : 0);
+        result = 31 * result + (directorDayOfBirth != null ? directorDayOfBirth.hashCode() : 0);
+        result = 31 * result + (directorBiography != null ? directorBiography.hashCode() : 0);
+        result = 31 * result + idTvSeries;
+        return result;
+    }
+}
 }
