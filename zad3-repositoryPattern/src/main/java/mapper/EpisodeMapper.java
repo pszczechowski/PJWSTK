@@ -42,7 +42,7 @@ public class EpisodeMapper extends AbstractMapper<Episode> {
     }
 
     @Override
-    protected Episode doLoad(ResultSet rs) throws SQLException {
+    public Episode doLoad(ResultSet rs) throws SQLException {
         Episode e = new Episode();
         e.setId(rs.getInt("id"));
         e.setEpisodeName(rs.getString("episodeName"));
