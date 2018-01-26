@@ -150,13 +150,13 @@ public class UserController {
         List<Permission> permissions = new ArrayList<>();
 
 
-        Address address1 = new Address("Warszawa", 5,6,"Mineralna","37-661",
+        Address address1 = new Address("Warszawa", 10,6,"Mineralna","37-871",
                 "Polska");
 
 
         Permission permission1 = new Permission("Kompilowanie");
-        Permission permission2 = new Permission("Debugowanie");
-        Permission permission3 = new Permission("Dziedziczenie");
+        Permission permission2 = new Permission("Monitorowanie");
+        Permission permission3 = new Permission("Debugowanie");
 
 
         addresses.add(address1);
