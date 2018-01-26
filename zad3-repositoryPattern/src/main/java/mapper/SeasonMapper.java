@@ -41,7 +41,7 @@ public class SeasonMapper extends AbstractMapper<Season> {
     }
 
     @Override
-    protected Season doLoad(ResultSet rs) throws SQLException {
+    public Season doLoad(ResultSet rs) throws SQLException {
         Season s = new Season();
         s.setId(rs.getInt("id"));
         s.setSeasonNumber(rs.getInt("seasonNumber"));
