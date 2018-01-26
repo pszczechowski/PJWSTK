@@ -20,7 +20,7 @@ public abstract class AbstractMapper<T extends DomainObject> {
     abstract protected String updateStatement();
     abstract protected String removeStatement();
 
-    abstract protected T doLoad(ResultSet rs) throws SQLException;
+    abstract public T doLoad(ResultSet rs) throws SQLException;
     abstract protected void parametrizeInsertStatement(PreparedStatement statement, T entity) throws SQLException;
     abstract protected void parametrizeUpdateStatement(PreparedStatement statement, T entity) throws SQLException;
 
@@ -80,7 +80,12 @@ public abstract class AbstractMapper<T extends DomainObject> {
     }
 
     public void remove(Long id){
+        boolean contains = loadedMap.containsKey(id);
+            if(!contains){
+              throw new IllegalArgumentException();
+           }
         PreparedStatement removeStatement = null;
+
         try{
             removeStatement = connection.prepareStatement(removeStatement());
             removeStatement.setLong(1,id);
