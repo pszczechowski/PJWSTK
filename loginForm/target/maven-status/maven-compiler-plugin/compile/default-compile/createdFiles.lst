@@ -1,0 +1,16 @@
+filters\PremiumFilter.class
+servlets\LoginServlet.class
+servlets\RegisterServlet.class
+controllers\DatabaseController.class
+servlets\DeleteUserServlet.class
+servlets\FormServlet.class
+filters\LoginFilters.class
+servlets\IndexServlet.class
+filters\IndexFilter.class
+servlets\PremiumServlet.class
+filters\RegisterFilter.class
+servlets\LogoutServlet.class
+servlets\RightsServlet.class
+filters\RightsFilter.class
+controllers\Dao.class
+model\User.class
